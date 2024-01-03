@@ -23,9 +23,8 @@ export default function App() {
         {/* <Button title='hello' onPress={e => {
           sendMessage()
         }} /> */}
-        <Link href={'/hello'}>
-          Hello
-        </Link>
+        <Link href={'/home'}>home으로</Link>
+        <Text>와 샌즈</Text>
       </View>
     </SafeAreaView>
   );

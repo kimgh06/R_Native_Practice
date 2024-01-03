@@ -1,19 +1,13 @@
 import { Button, Text, Image } from 'react-native';
-
+import { useState } from 'react';
 import { Stack } from 'expo-router';
 
 
 function LogoTitle() {
-  return (
-    <Image
-      style={{ width: 50, height: 50 }}
-      source={require('@expo/snack-static/react-native-logo.png')}
-    />
-  );
 }
 
 export default function Home() {
-  const [count, setCount] = React.useState(0);
+  const [count, setCount] = useState(0);
 
   return (
     <>
