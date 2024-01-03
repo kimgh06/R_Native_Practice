@@ -17,17 +17,15 @@ export default function App() {
     }
   }
 
-  return (
-    <SafeAreaView style={styles.container}>
-      <View>
-        {/* <Button title='hello' onPress={e => {
+  return <SafeAreaView style={styles.container}>
+    <View>
+      {/* <Button title='hello' onPress={e => {
           sendMessage()
         }} /> */}
-        <Link href={'/home'}>home으로</Link>
-        <Text>와 샌즈</Text>
-      </View>
-    </SafeAreaView>
-  );
+      <Link href={'/home'}>home으로</Link>
+      <Text>와 샌즈</Text>
+    </View>
+  </SafeAreaView>;
 }
 
 const styles = StyleSheet.create({
