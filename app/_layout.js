@@ -12,9 +12,10 @@ export default function Layout() {
         headerTitleStyle: {
           fontWeight: 'bold',
         },
+        title: '와 샌즈'
       }}>
       {/* Optionally configure static options outside the route. */}
-      <Stack.Screen name="home" options={{}} />
+      {/* <Stack.Screen name="home" options={{ title: 'welcome home' }} /> */}
     </Stack>
   );
 }

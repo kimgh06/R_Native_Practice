@@ -7,7 +7,7 @@ import { Link } from 'expo-router';
 
 export default function App() {
   const [loca, setLoca] = useState(null);
-  const sendMessage = async e => {
+  const SendMessage = async e => {
     const able = await SMS.isAvailableAsync();
     if (able) {
       const result = await SMS.sendSMSAsync(
@@ -33,7 +33,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'orange',
+    backgroundColor: 'white',
     alignItems: 'center',
     justifyContent: 'center'
   }
