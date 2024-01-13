@@ -9,10 +9,15 @@ export default function App() {
   const [loca, setLoca] = useState(null);
   const GetLoaction = e => {
     if ("geolocation" in navigator) {
+      const option = {
+        enableHighAccuracy: true,
+        maximumAge: 30000,
+        timeout: 27000
+      }
       // const location = navigator.geolocation.getCurrentPosition()
       navigator.geolocation.watchPosition(e => {
         console.log(e.coords)
-      })
+      }, err => alert("can't use"), option)
     }
   }
 
