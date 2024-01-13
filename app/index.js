@@ -7,21 +7,20 @@ import { Link } from 'expo-router';
 
 export default function App() {
   const [loca, setLoca] = useState(null);
-  const SendMessage = async e => {
-    const able = await SMS.isAvailableAsync();
-    if (able) {
-      const result = await SMS.sendSMSAsync(
-        ['01091677752'], 'Hello there'
-      )
-      console.log(result)
+  const GetLoaction = e => {
+    if ("geolocation" in navigator) {
+      // const location = navigator.geolocation.getCurrentPosition()
+      navigator.geolocation.watchPosition(e => {
+        console.log(e.coords)
+      })
     }
   }
 
   return <SafeAreaView style={styles.container}>
     <View>
-      {/* <Button title='hello' onPress={e => {
-          sendMessage()
-        }} /> */}
+      <Button title='hello' onPress={e => {
+        GetLoaction();
+      }} />
       <Link href={'/home'}>home으로</Link>
       <Text>와 샌즈</Text>
     </View>
